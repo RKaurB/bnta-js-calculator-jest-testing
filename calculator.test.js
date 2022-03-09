@@ -176,18 +176,29 @@ describe("modulus", () => {
 // Describe block - testing even function
 describe("even", () => {
 
+  // test("even returns true if number is even", () => {
+  //   expected = true;
+  //   actual = even(42);
+  //   expect(actual).toBe(expected);
+  // })
+
   test("even returns true if number is even", () => {
-    expected = true;
     actual = even(42);
-    expect(actual).toBe(expected);
+    // Use toBeTruthy assertion method (https://jestjs.io/docs/expect)
+    expect(actual).toBeTruthy;
   })
+
+  // test("even returns false if number is odd", () => {
+  //   expected = false;
+  //   actual = even(17);
+  //   expect(actual).toBe(expected);
+  // })
 
   test("even returns false if number is odd", () => {
-    expected = false;
     actual = even(17);
-    expect(actual).toBe(expected);
+    // Use toBeFalsy assertion method (https://jestjs.io/docs/expect)
+    expect(actual).toBeFalsy;
   })
-
 
 });
 
@@ -206,6 +217,5 @@ describe("odd", () => {
     actual = odd(18);
     expect(actual).toBe(expected);
   })
-
 
 });
