@@ -152,7 +152,17 @@ describe("divide", () => {
 // Describe block - testing modulus function
 describe("modulus", () => {
 
+  test("modulus can return remainder", () => {
+    expected = 1;
+    actual = modulus(3, 2);
+    expect(actual).toBe(expected);
+  }) 
 
+  test("modulus can return 0 if no remainder", () => {
+    expected = 0;
+    actual = modulus(2, 2);
+    expect(actual).toBe(expected);
+  })
 
 });
 
@@ -160,6 +170,17 @@ describe("modulus", () => {
 // Describe block - testing even function
 describe("even", () => {
 
+  test("even returns true if number is even", () => {
+    expected = true;
+    actual = even(42);
+    expect(actual).toBe(expected);
+  })
+
+  test("even returns false if number is odd", () => {
+    expected = false;
+    actual = even(17);
+    expect(actual).toBe(expected);
+  })
 
 
 });
@@ -168,6 +189,17 @@ describe("even", () => {
 // Describe block - testing odd function
 describe("odd", () => {
 
+  test("odd returns true if number is odd", () => {
+    expected = true;
+    actual = odd(43);
+    expect(actual).toBe(expected);
+  })
+
+  test("odd returns false if number is even", () => {
+    expected = false;
+    actual = odd(18);
+    expect(actual).toBe(expected);
+  })
 
 
 });
