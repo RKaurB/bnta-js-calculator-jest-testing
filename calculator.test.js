@@ -82,12 +82,70 @@ describe("subtract", () => {
 
 });
 
-describe("multiply", () => {});
 
-describe("divide", () => {});
+// Describe block - testing multiply function
+describe("multiply", () => {
 
-describe("modulus", () => {});
+  test("can multiply two small positive numbers", () => {
+    expected = 8;
+    actual = multiply(2, 4);
+    expect(actual).toBe(expected);
+  });
 
-describe("even", () => {});
+  test("can multiply two large positive numbers", () => {
+    expected = 7_000_000_000_000;
+    actual = multiply(2_000_000, 3_500_000 );
+    expect(actual).toBe(expected);
+  });
 
-describe("odd", () => {});
+  test("can multiply two negative numbers", () => {
+    expected = 24;
+    actual = multiply(-8, -3);
+    expect(actual).toBe(expected);
+  });
+
+  test("can multiply zero", () => {
+    expected = 0;
+    actual = multiply(122, 0);
+    expect(actual).toBe(expected);
+  });
+
+  test("can multiply decimal numbers", () => {
+    expected = 200.112;
+    actual = multiply(15.16, 13.20);
+    expect(actual).toBeCloseTo(expected);
+  });
+
+});
+
+
+// Describe block - testing divide function
+describe("divide", () => {
+
+
+
+});
+
+
+// Describe block - testing modulus function
+describe("modulus", () => {
+
+
+
+});
+
+
+// Describe block - testing even function
+describe("even", () => {
+
+
+
+});
+
+
+// Describe block - testing odd function
+describe("odd", () => {
+
+
+
+});
