@@ -146,6 +146,12 @@ describe("divide", () => {
     expect(actual).toBeCloseTo(expected);
   });
 
+  test("cannot divide by 0", () => {
+    actual = divide(38, 0);
+    // Use toBeNaN assertion method (https://jestjs.io/docs/expect)
+    expect(actual).toBeNaN;
+  })
+
 });
 
 
