@@ -68,6 +68,19 @@ console.log(odd(8));
 console.log(odd(7));
 
 
+// Odd or Even function - returns even if number is even, or odd if number is odd
+const oddOrEven = function(num) {
+    if (num % 2 === 0) {
+        return "even";
+    } else {
+        return "odd";
+    }
+};
+// Call function
+console.log(oddOrEven(8));
+console.log(oddOrEven(7));
+
+
 module.exports = { 
     sum, 
     subtract, 
@@ -75,5 +88,6 @@ module.exports = {
     divide, 
     modulus, 
     even, 
-    odd 
+    odd,
+    oddOrEven
 };

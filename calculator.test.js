@@ -6,6 +6,7 @@ const {
   modulus,
   even,
   odd,
+  oddOrEven,
 } = require("./calculator");
 
 
@@ -182,17 +183,17 @@ describe("even", () => {
   //   expect(actual).toBe(expected);
   // })
 
+    // test("even returns false if number is odd", () => {
+  //   expected = false;
+  //   actual = even(17);
+  //   expect(actual).toBe(expected);
+  // })
+
   test("even returns true if number is even", () => {
     actual = even(42);
     // Use toBeTruthy assertion method (https://jestjs.io/docs/expect)
     expect(actual).toBeTruthy;
   })
-
-  // test("even returns false if number is odd", () => {
-  //   expected = false;
-  //   actual = even(17);
-  //   expect(actual).toBe(expected);
-  // })
 
   test("even returns false if number is odd", () => {
     actual = even(17);
@@ -212,22 +213,40 @@ describe("odd", () => {
   //   expect(actual).toBe(expected);
   // })
 
-  test("odd returns true if number is odd", () => {
-    actual = odd(43);
-    // Use toBeTruthy assertion method (https://jestjs.io/docs/expect)
-    expect(actual).toBeTruthy;
-  })
-
   // test("odd returns false if number is even", () => {
   //   expected = false;
   //   actual = odd(18);
   //   expect(actual).toBe(expected);
   // })
 
+  test("odd returns true if number is odd", () => {
+    actual = odd(43);
+    // Use toBeTruthy assertion method (https://jestjs.io/docs/expect)
+    expect(actual).toBeTruthy;
+  })
+
   test("odd returns false if number is even", () => {
     actual = odd(18);
     // Use toBeFalsy assertion method (https://jestjs.io/docs/expect)
     expect(actual).toBeFalsy;
+  })
+
+});
+
+
+// Describe block - testing oddOrEven function
+describe("oddOrEven", () => {
+
+  test("oddOrEven returns even if number is even", () => {
+    expected = "even";
+    actual = oddOrEven(122);
+    expect(actual).toBe(expected);
+  })
+
+  test("oddOrEven returns odd if number is odd", () => {
+    expected = "odd";
+    actual = oddOrEven(17);
+    expect(actual).toBe(expected);
   })
 
 });
