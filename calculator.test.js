@@ -50,19 +50,19 @@ describe("sum", () => {
 // Describe block - testing subtract function
 describe("subtract", () => {
 
-  test("can subtract two small positive numbers", () => {
+  test("can subtract a small positive number", () => {
     expected = 5;
     actual = subtract(8, 3);
     expect(actual).toBe(expected);
   });
 
-  test("can subtract two large positive numbers", () => {
+  test("can subtract a large positive number", () => {
     expected = 468_000_000_000_000;
     actual = subtract(968_000_000_000_000, 500_000_000_000_000);
     expect(actual).toBe(expected);
   });
 
-  test("can subtract two negative numbers", () => {
+  test("can subtract a negative number", () => {
     expected = -5;
     actual = subtract(-8, -3);
     expect(actual).toBe(expected);
@@ -74,7 +74,7 @@ describe("subtract", () => {
     expect(actual).toBe(expected);
   });
 
-  test("can subtract decimal numbers", () => {
+  test("can subtract a decimal number", () => {
     expected = 2.25;
     actual = subtract(15.35, 13.10);
     expect(actual).toBeCloseTo(expected);
@@ -122,7 +122,29 @@ describe("multiply", () => {
 // Describe block - testing divide function
 describe("divide", () => {
 
+  test("can divide two small positive numbers", () => {
+    expected = 8;
+    actual = divide(16, 2);
+    expect(actual).toBe(expected);
+  });
 
+  test("can divide two large positive numbers", () => {
+    expected = 1.6;
+    actual = divide(4_000_000_000, 2_500_000_000 );
+    expect(actual).toBe(expected);
+  });
+
+  test("can divide two negative numbers", () => {
+    expected = 3;
+    actual = divide(-15, -5);
+    expect(actual).toBe(expected);
+  });
+
+  test("can divide decimal numbers", () => {
+    expected = 3.304;
+    actual = divide(41.3, 12.5);
+    expect(actual).toBeCloseTo(expected);
+  });
 
 });
 
